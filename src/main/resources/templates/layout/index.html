@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VHP - Store</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/shopping-cart-app.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body class="container" ng-app="shopping-cart-app" 
+	ng-controller="shopping-cart-ctrl">
+	<header class="row"></header>
+
+
+	<div class="widget Translate" data-version="1" id="Translate2">
+	<div id="google_translate_element"><div class="skiptranslate" dir="ltr" style=""></div></div>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'vi',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			}, 'google_translate_element');
+		}
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'vi,en,ko,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+	</script>
+</div>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+	<nav class="row">
+		 <div th:replace="/layout/_menu.html"></div>
+	</nav>
+	<div class="row">
+		<article class="col-sm-9">
+			<div th:replace="${main}"></div>
+		</article>
+		<aside class="col-sm-3">
+			<div th:replace="/layout/_cart-info.html"></div>
+			<div th:replace="/layout/_category.html"></div>
+		</aside>
+	</div>
+	<footer class="row">
+		<div class="panel panel-default">
+			<div class="panel-body text-center">
+				<h4>PS12860  - VUHOANGPHUC</h4>
+			</div>
+		</div>
+	</footer>
+	<script src="/assets/js/shopping-cart-app.js"></script>
+	<script src="/assets/js/account-ctrl.js"></script>
+</body>
+</html>

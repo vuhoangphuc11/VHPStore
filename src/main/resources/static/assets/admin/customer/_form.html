@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+    <div class="panel-heading">CUSTOMER EDITION</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <label for="image">
+                    <img ng-src="{{'/assets/images/'+ form.image}}" style="max-width: 100%;height: 200px;">
+                </label>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <div>Username</div>
+                        <input ng-model="form.username" class="form-control" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div>Password</div>
+                        <input ng-model="form.password" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <div>Fullname</div>
+                        <input ng-model="form.fullname" class="form-control" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div>Email</div>
+                        <input ng-model="form.email" type="email" class="form-control" readonly>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

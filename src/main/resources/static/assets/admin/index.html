@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VHPStore - Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body class="container" ng-app="admin-app">
+    <header class="row">
+        <h2 class="alert alert-success">VHPStore Administration</h2>
+    </header>
+    <div class="row">
+        <nav class="navbar navbar-inverse" style="font-variant: small-caps;">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#!product">Products</a></li>
+                    <li><a href="#!authorize">Authorizing</a></li>
+                    <li><a href="#!order">Orders</a></li>
+                    <li><a href="#!customer">Customer</a></li>
+                    <li><a href="/security/logoff">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>  
+    <main>
+        <p class="ng-view"></p>
+    </main>	
+    <footer>
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h3>PS12860 - VUHOANGPHUC</h3>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/admin/admin-app.js"></script>
+    <script src="/assets/admin/product/product-ctrl.js"></script>
+    <script src="/assets/admin/authority/authority-ctrl.js"></script>
+    <script src="/assets/admin/order/order-ctrl.js"></script>
+    <script src="/assets/admin/customer/customer-ctrl.js"></script>
+</body>
+</html>

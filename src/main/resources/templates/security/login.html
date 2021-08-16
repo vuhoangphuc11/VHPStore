@@ -1,0 +1,38 @@
+<div xmlns:th="http://www.thymeleaf.org" 
+    th:replace="~{/layout/index :: dynamic(~{::main})}">
+    <main>
+        <form th:action="@{/security/login}" method="post" class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">SHOPPING CART LOGIN</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div>Username:</div>
+                        <input name="username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div>Password:</div>
+                        <input name="password" type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="remember-me">Remember Me?
+                            </label>
+                        </div>   
+                    </div>
+                    <div class="form-group">
+                        <a href="/security/signup/form">Đăng ký</a>
+                    </div> 
+                    
+                </div>
+                <div class="panel-footer text-right">
+
+                    <a class="btn btn-info" href="/oauth2/authorization/google"><i class="bi bi-google"></i> Google</a> | 
+                    <a class="btn btn-primary" href="/oauth2/authorization/facebook"><i class="bi bi-facebook"></i> Facebook</a>
+                    <i class="pull-left text-danger" th:text="${message}"></i>
+                    <button class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>

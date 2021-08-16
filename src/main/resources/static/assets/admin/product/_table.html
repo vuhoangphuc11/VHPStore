@@ -1,0 +1,52 @@
+<div class="panel panel-default" ng-if="items">
+    <div class="panel-heading">PRODUCT LIST</div>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <br>
+        <input class="form-control" type="text" ng-model="key" placeholder="Nhập tên sản phẩm bạn muốn tìm kiếm!">
+        <br>
+    </div>
+    <div class="col-sm-3"></div>
+    <table class="table table-condensed">
+        <thead class="bg-success" style="font-variant: small-caps;"> 
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Available?</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in pager.items|filter:key">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price | number : 2}}</td>
+                <td>{{item.createDate | date: 'dd-MM-yyyy'}}</td>
+                <td>{{item.image}}</td>
+                <td>{{item.category.name}}</td>
+                <td>{{item.available?'Còn hàng':'Hết hàng'}}</td>
+                <td>
+                    <div class="btn-group btn-group-xs">
+                        <button ng-click="edit(item)" class="btn btn-warning glyphicon glyphicon-edit"></button>
+                        <button ng-click="delete(item)" class="btn btn-danger glyphicon glyphicon-trash"></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="panel-footer text-center">
+        <nav aria-label="...">
+            <ul class="pager">
+              <li><a ng-click="pager.first()">First</a></li>
+              <li><a ng-click="pager.prev()">Prev</a></li>
+              <li><a href="#">{{pager.page + 1}} of {{pager.count}}</a></li>
+              <li><a ng-click="pager.next()">Next</a></li>
+              <li><a ng-click="pager.last()">Last</a></li>
+            </ul>
+          </nav>
+    </div>  
+</div>
