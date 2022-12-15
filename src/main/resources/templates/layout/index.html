@@ -16,25 +16,6 @@
 <body class="container" ng-app="shopping-cart-app" 
 	ng-controller="shopping-cart-ctrl">
 	<header class="row"></header>
-
-
-	<div class="widget Translate" data-version="1" id="Translate2">
-	<div id="google_translate_element"><div class="skiptranslate" dir="ltr" style=""></div></div>
-	<script>
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({
-				pageLanguage: 'vi',
-				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-			}, 'google_translate_element');
-		}
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'vi,en,ko,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		}
-	</script>
-</div>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
 	<nav class="row">
 		 <div th:replace="/layout/_menu.html"></div>
 	</nav>
